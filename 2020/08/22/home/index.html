@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/favicon.png" />
+    
+
+    <title>
+        
+          Losnah&#39;s Think Story - Losnah&#39;s Think Story
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/">
+    <img src="/favicon.png">
+    <span>LOSNAH&#39;S THINK STORY</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <ul>
+<li><a href="/">Home</a></li>
+<li><a href="/"></a></li>
+</ul>
+<h2 id="Notion">Notion</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.notion.so/Thorr-Wiki-06d8bd19779d4243b0bfa2778bcb2a9d">Thorr Wiki</a></li>
+</ul>
+
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h3 id="보안-개발-기획">보안 -&gt; 개발 -&gt; 기획</h3>
+<p><strong>정보보호학과</strong></p>
+<ul>
+<li>컴퓨터를 사용하는 모든 사용자들이 안전하게 이용할 수 있도록 하는 것을 꿈꾸며 진학을 했습니다.</li>
+<li>보안을 공부하며, 개발을 이해하지 못한다면 이론으로 배운 보안은 수박 겉핥기라고 생각했습니다.</li>
+<li>암호학에 관심이 있던 저는 정수론을 기반으로 계산할 수 있는 프로그램을 만들며 개발 실력을 키움</li>
+</ul>
+<p><strong>잔디정원사, 오픈채팅방 (소수 정예)</strong></p>
+<ul>
+<li>개발을 공부할때 목표를 가지고 ‘1Day 1Contribution’ 을 목표로 하루에 하나씩 공부한 내용을 Github에 올리며 공부</li>
+<li>개발을 공부하며 가장 기뻤던 것 = “내가 생각한 것을 내가 만들 수 있다.”</li>
+<li>개발자들끼리 소통을 하며, 고충들을 알며 소통할 수 있는 방안들을 알게됌</li>
+<li>오픈채팅방에서 스터디를 진행하기도 하고, 정보 교류도 하며 조금 더 발전</li>
+</ul>
+<p><strong>한국블록체인연구교육원, 교육과정 수료</strong></p>
+<ul>
+<li>블록체인 서비스를 개발하게 되면, 사용자들에게 조금 더 안전하고 신뢰할 수 있는 서비스를 만들어 줄 수 있을 것이란 생각으로 시작</li>
+<li>블록체인에 대한 기본 이론을 배우고, IBM의 '하이퍼레저 패브릭’를 공부하여 프로젝트를 진행함</li>
+<li>프로젝트를 진행하면서 문제 파악, 해결 방안 마련, 기능 설계 등의 기획 업무를 진행하며 흥미를 느낌</li>
+</ul>
+<p><strong>블록체인 SI 기업 취업, 기획 업무를 담당함</strong></p>
+<ul>
+<li>블록체인 서비스를 만들어 조금 더 신뢰있는 서비스를 만들고 싶었음.</li>
+<li>블록체인 기술에 대한 이해를 기반으로 다양한 솔루션에 대해 제안을 했음</li>
+<li>경영난으로 인한 권고사직</li>
+</ul>
+<p><strong>현재</strong></p>
+<ul>
+<li>짧은 기간 동안 다양한 제안을 써보긴 했지만, 부족함을 느낌</li>
+<li>앞으로 성장하기 위한 서비스 기획의 기본기를 다져보려고 함.</li>
+<li>필요한 내용을 정리하여 블로그에 올릴 예정</li>
+</ul>
+
+</div>
+
+
+  <div class="book-comments">
+    
+<script src="https://utteranc.es/client.js"
+        repo="losnah-think/product-manager"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="L"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>Losnah</div>
+      <div>2020-08-22</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>
