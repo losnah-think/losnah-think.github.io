@@ -1,267 +1,442 @@
 <!DOCTYPE html>
-<html lang="ko">
 
+<html lang="en" class="no-js" id="body">
+
+	<!-- BEGIN HEAD -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-    
-      <link rel="icon" href="/favicon.png" />
-    
+  
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
 
-    <title>
-        
-          Losnah&#39;s Think Story
-        
-    </title>
+  <title>Losnah&#39;s Think Story</title>
 
-    <!-- Spectre.css framework -->
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  
 
-    <!-- theme css & js -->
-    
-<link rel="stylesheet" href="/css/book.css">
+  <meta name="description" content="기획에 필요한 내용들을 정리하며 학습합니다.">
 
-    
-<script src="/js/book.js"></script>
+  
 
 
-    <!-- tocbot -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-    
-    <!-- katex -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/2980/5252/files/favicon_32x32.png?v=1521894486" type="image/png">
 
-    <!-- google AdSense -->
-    <script data-ad-client="ca-pub-3394401430657820" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
 
-ga('create', 'UA-176039784-1', 'auto');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const zooming = new Zooming()
-    zooming.listen('.book-content img')
-})
-</script>
-
-<meta name="generator" content="Hexo 5.0.2"></head>
-
-<body>
-
-<div class="book-container">
-  <div class="book-sidebar">
-    <div class="book-brand">
-  <a href="/">
-    <img src="/favicon.png">
-    <span>LOSNAH&#39;S THINK STORY</span>
-  </a>
-</div>
-    <div class="book-menu">
-  <ul>
-<li><a href="/">Home</a></li>
-<li><a href="/Project/Project-Story">Project</a></li>
-</ul>
-<h1>Blog</h1>
-<ul>
-<li><a href="/Think-Blog/MinimumViableProduct/">MVP(MinimumViableProduct) 개발, 서비스 기획의 대처 방안</a></li>
-</ul>
-<h1>Read Book-List</h1>
-<ul>
-<li><a href="/Book-List/%EA%B8%B0%ED%9A%8D%EC%9E%90%EC%9D%98-%EC%9D%BC">기확자의 일</a></li>
-<li><a href="/Book-List/MakingWorkVisible/">Making Work Visible</a></li>
-</ul>
-<h1>Notion</h1>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.notion.so/Thorr-Wiki-06d8bd19779d4243b0bfa2778bcb2a9d">Thorr Wiki</a></li>
-</ul>
-
-</div>
+<!-- Open Graph data-->
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Losnah&#39;s Think Story">
+<meta property="og:site_name" content="Losnah&#39;s Think Story">
+<meta property="og:url" content="http://losnah-think.github.io/archives/2020/08/index.html">
+<meta property="og:description" content="기획에 필요한 내용들을 정리하며 학습합니다.">
 
 
-<script src="/js/book-menu.js"></script>
 
-  </div>
 
-  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
-  <div class="sidebar-toggle-inner"></div>
-</div>
 
-<script>
-function add_inner() {
-  let inner = document.querySelector('.sidebar-toggle-inner')
-  inner.classList.add('show')  
-}
+<!-- end Open Graph data-->
+  
+<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+  
+<!-- GLOBAL MANDATORY STYLES -->
+<link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="/vendor/animate.css/animate.css" rel="stylesheet">
 
-function remove_inner() {
-  let inner = document.querySelector('.sidebar-toggle-inner')
-  inner.classList.remove('show')
-}
 
-function sidebar_toggle() {
-    let sidebar_toggle = document.querySelector('.sidebar-toggle')
-    let sidebar = document.querySelector('.book-sidebar')
-    let content = document.querySelector('.off-canvas-content')
-    if (sidebar_toggle.classList.contains('extend')) { // show
-        sidebar_toggle.classList.remove('extend')
-        sidebar.classList.remove('hide')
-        content.classList.remove('extend')
-    }
-    else { // hide
-        sidebar_toggle.classList.add('extend')
-        sidebar.classList.add('hide')
-        content.classList.add('extend')
-    }
-}
-</script>
 
-  <div class="off-canvas-content">
-    <div class="columns">
-      <div class="column col-10 col-lg-12">
-        <div class="book-navbar">
-          <!-- For Responsive Layout -->
+<link rel="stylesheet" href="/sass/layout.css">
 
-<header class="navbar">
-  <section class="navbar-section">
-    <a onclick="open_sidebar()">
-      <i class="icon icon-menu"></i>
-    </a>
-  </section>
+  
+
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<!-- END HEAD -->
+
+  <body>
+		
+		
+
+
+<!--========== HEADER ==========-->
+<header class="header navbar-fixed-top">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="menu-container js_nav-item">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="toggle-icon"></span>
+              </button>
+
+              <!-- Logo -->
+              <div class="logo">
+                <!-- En caso de una text -->
+                
+                    <a class="logo-wrap" href="/#body" style="text-decoration: none;" >
+                        <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                        <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                    </a>
+                
+              </div>
+              <!-- End Logo -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-collapse">
+              <div class="menu-container">
+                  <ul class="nav navbar-nav navbar-nav-right">
+                      
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#body"
+                            >
+                            Home
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#about"
+                            >
+                            About
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#work"
+                            >
+                            Work
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#contact"
+                            >
+                            Contact
+                        </a>
+                        </li>
+                      
+                  </ul>
+              </div>
+          </div>
+          <!-- End Navbar Collapse -->
+      </div>
+  </nav>
+  <!-- Navbar -->
+
 </header>
+<!--========== END HEADER ==========-->
 
-        </div>
-        <div class="book-content">
-          <div class='book-archive'>
-  <!-- Title -->
-  
-    <h1>Archives</h1>
-  
+		<section id="blog">
 
   
-    <!-- Split post by year -->
-    
-  
 
-  
-      <div class="years">
-          <h2>2020</h2>
-          <ul class="archive-list-item">
-          
-              <li>
-                <span>2020-08-24</span>
-                <a href="/Project/Project-Story/">
-                  Project-Story
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-23</span>
-                <a href="/Book-List/기획자의-일/">
-                  기획자의 일
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-22</span>
-                <a href="/Think-Blog/MinimumViableProduct/">
-                  Minimum Viable Product 개발에서 서비스 기획의 대처 방안
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-22</span>
-                <a href="/Book-List/MakingWorkVisible/">
-                  Making Work Visible
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-22</span>
-                <a href="/menu/">
-                  Untitled
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-22</span>
-                <a href="/home/">
-                  Losnah's Think Story
-                </a>
-              </li>
-          
-          </ul>
-      </div>
-  
+  <div class="container">
+    <div class="content content-width row">
 
+      
+      <div class="post-list-container col-md-8">
+        
+          
+            
+<div class="post first-post">
+  <h1><a href="/Project/Project-Story/"> Project-Story </a></h1>
+  <p class="date"> Mon Aug 24 2020 22:00:45 GMT+0900 </p>
   
+  
+    <p> Losnah’s Project Story
+프로젝트 명 : 양자택일형 연예인 선호도 투표 앱 (Make for Fan)
+프로젝트 기간 : 2019.09 ~ 2019.11
+수행 내용 :
+
+
+제품 영상 및 발표 자료
+Hyperledger Fabric 기반 연예인 투표 앱
+
+
+아이디어 기획 및 자료 조사
+
+기획 사유 : 프로듀스 101 전 시리즈 조작 사건 이후 신뢰할 수 있는 투표 시스템에 필요성을 느껴 기획
+
+
+
+각종 문서 및 발표자료 제작
+
+
+기획안 작성 내용 : https://www.notion.so/iloveblockchain/FFF-72625d9e47174cd8b7894574a81b58a7
+
+
+
+프로젝트 명 : 제품 키 중고 거래 및 관리 프로젝트, 품키품키
+프로젝트 기간 : 2019.09 ~ 2019.10
+수행 내용:
+
+
+제품 구현 영상 : https://www.youtube.com/watch?v=0Abn7ioxLis
+
+
+아이디어 기획 및 각종 설계 문서 작성
+
+기획 사유 : 사용자의 제품키 관리 미흡, 제품키 중고 거래의 제도화 목적
+
+기획 배경
+
+해외에서의... </p>
+  
+  <p class="continue"><a href="/Project/Project-Story/" class="btn">Continue reading...</a></p>
 </div>
-        </div>
-      </div>
-      <div class="column col-2 hide-lg">
-        <div class="book-post-info">
-  
-    <div class="book-post-meta">
 
-  <div class="author">
+          
+          
+          
+            
 
-    <!-- Author image -->
-    <div class="author-img">
+<div class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><a href="/Book-List/%EA%B8%B0%ED%9A%8D%EC%9E%90%EC%9D%98-%EC%9D%BC/"> 기획자의 일 </a></h1>
+      <p class="date"> Sun Aug 23 2020 13:30:09 GMT+0900 </p>
       
-        <figure class="avatar avatar-lg">
-          <img src="/profile.png" alt="...">
-        </figure>
-      
-    </div>
+        <p> 
+수학의 정석이 있듯 기획에도 정석이 있다는 것을 알게된 책이다.
 
-    <!-- Author title -->
-    <div class="author-title">
-      <div>Losnah</div>
-      <div></div>
+만족도 : ★★★★★ 
+재미도 : ★★★★★ 
+퀄리티 : ★★★★★ 
+가독성 : ★★★★★
+
+Losnah’s Comment :
+기획을 제대로 배워오지 않은 나를 되돌아봐주는 책이었다. 기획에 대해 조금 더 성장할 수 있게 해준 책이다.
+독자들의 눈높이에 맞춰주는 올바른 예시와 다양한 도구들의 소개 및 적절한 활용법. 글만 읽는데도 글쓴이의 내공이 느껴졌다. 당연히 했던 것들의 의미를 알게되었고, 당연히 해야하는 것을 안하고 있는 것도 알게되었다.
+기획자라면 반드시 읽어보아야 할 책이라고 생각한다. 덤으로 이 책에서는 적절한 예시속에 사회생활도 녹아있다보니, 간접적으로 회사생활을 체험할 수 있다. 회사 속 나를 생각하며 되돌아보는 시간이 될 수도 있다.
+ </p>
+      
     </div>
   </div>
-
-  
-
-  <div class="divider"></div>
-</div>
-  
-
-  <div class="book-tocbot">
-</div>
-<div class="book-tocbot-menu">
-  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-  <a onclick="go_top()">Back to top</a>
-  <a onclick="go_bottom()">Go to bottom</a>
+  <div>
+    <p class="continue"><a href="/Book-List/%EA%B8%B0%ED%9A%8D%EC%9E%90%EC%9D%98-%EC%9D%BC/" class="btn">Continue reading...</a></p>
+  </div>
 </div>
 
 
-<script src="/js/book-toc.js"></script>
+          
+          
+          
+            
 
-</div>
-      </div>
+<div class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><a href="/Think-Blog/MinimumViableProduct/"> Minimum Viable Product 개발에서 서비스 기획의 대처 방안 </a></h1>
+      <p class="date"> Sat Aug 22 2020 23:37:00 GMT+0900 </p>
+      
+        <p> MVP 개발이란 무엇일까?
+많은 사이트에서 최소한의 기능을 담아 납품하는 것을 MVP 개발이라고 표현을 한다.
+하지만 MVP 개발의 궁극적인 목표는 다음과 같다.
+고객에게 어필할 수 있는 핵심 기능을 가진 최소한의 제품을 개발하는 것
+만약 첫줄의 내용만으로 생각을 한다면, 도서 시스템을 구축해야지, 고객이 책만 빌릴 수 있으면 될꺼야! 라고 생각할 수 있다.
+하지만 MVP 모델의 궁극적인 목표는 제품이 고객에게 어필할 수 있는 매력이 있어야한다는 것이다.
+이 매력은 제품이 가질 수 있는 핵심 기능에 관한 것이어야 한다. 현재 많은 도서 시스템들이 있겠지만 단순히 도서를 빌리기만 한다고 해선 고객이 매력을 느낄 수 없다. 따라서 이 제품은 MVP 개발이라고 할 수 없다.
+
+고객에게 제공할 수 있는 최소한의 기능을 가진 매력적인 제품을 생각해보자. 오늘날 우리에겐 E-Book 이라는 전자책 문화가 자리잡고 있고, 오프라인 서적과 온라인 서적이 여기저기 펼쳐져있다. 책이 조금 더 가까워진 세상 속에서 책을 더 가까이 하기 위해서, 사용자들이 어떤 책을 좋아하는지 추천해주... </p>
+      
     </div>
   </div>
-  
-  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+  <div>
+    <p class="continue"><a href="/Think-Blog/MinimumViableProduct/" class="btn">Continue reading...</a></p>
+  </div>
 </div>
 
-</body>
+
+          
+          
+          
+            
+
+<div class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><a href="/Book-List/MakingWorkVisible/"> Making Work Visible </a></h1>
+      <p class="date"> Sat Aug 22 2020 15:25:22 GMT+0900 </p>
+      
+        <p> 
+업무 중 시간을 빼앗는 5가지 도둑에 대해서 어떻게 효과적으로 대응할 수 있는 지 잘 알려준 책
+
+만족도 : ★★★★☆ 
+재미도 : ★★★★★ 
+퀄리티 : ★★★★☆ 
+가독성 : ★★★☆☆
+
+Losnah’s Comment :
+칸반보드를 이용하여 업무 시각화를 하는 방안에 대해 쉽게 설명이 되어있다.
+다소 현실에 맞지 않는 방안들도 적혀있지만, 지켜지는 회사도 분명 있겠지만, 이상과 현실은 구분되어야 한다고 생각했다.
+책의 전반적인 부분에서 다루는 업무 시각화 부분에 대해서는 배울점이 참 많은 책이었다. 칸반보드를 재대로 활용하지 못할 경우에 정독하면 도움이 많이 될 책
+이 책과 같이 린프로세스를 제대로 이해하면 많은 도움이 될 듯하다.
+ </p>
+      
+    </div>
+  </div>
+  <div>
+    <p class="continue"><a href="/Book-List/MakingWorkVisible/" class="btn">Continue reading...</a></p>
+  </div>
+</div>
+
+
+          
+          
+          
+            
+
+<div class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><a href="/menu/">  </a></h1>
+      <p class="date"> Sat Aug 22 2020 11:38:30 GMT+0900 </p>
+      
+        <p> 
+Home
+Project
+
+Blog
+
+MVP(MinimumViableProduct) 개발, 서비스 기획의 대처 방안
+
+Read Book-List
+
+기확자의 일
+Making Work Visible
+
+Notion
+
+Thorr Wiki
+
+ </p>
+      
+    </div>
+  </div>
+  <div>
+    <p class="continue"><a href="/menu/" class="btn">Continue reading...</a></p>
+  </div>
+</div>
+
+
+          
+          
+          
+            
+
+<div class="post">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><a href="/home/"> Losnah&#39;s Think Story </a></h1>
+      <p class="date"> Sat Aug 22 2020 00:56:59 GMT+0900 </p>
+      
+        <p> Losnah’s my Story
+보안 -&amp;gt; 개발 -&amp;gt; 기획
+정보보호학과
+
+컴퓨터를 사용하는 모든 사용자들이 안전하게 이용할 수 있도록 하는 것을 꿈꾸며 진학
+보안을 공부하며, 개발을 이해하지 못한다면 이론으로 배운 보안은 수박 겉핥기라고 생각
+암호학에 관심이 있던 저는 정수론을 기반으로 계산할 수 있는 프로그램을 만들며 개발 실력을 키움
+
+잔디정원사, 오픈채팅방 (소수 정예)
+
+개발을 공부할때 목표를 가지고 ‘1Day 1Contribution’ 을 목표로 하루에 하나씩 공부한 내용을 Github에 올리며 공부
+개발을 공부하며 가장 기뻤던 것 = “내가 생각한 것을 내가 만들 수 있다.”
+개발자들끼리 소통을 하며, 고충들을 알며 소통할 수 있는 방안들을 알게됌
+오픈채팅방에서 스터디를 진행하기도 하고, 정보 교류도 하며 성장할 수 있는 동력을 얻음
+
+한국블록체인연구교육원, 교육과정 수료
+
+블록체인 서비스를 개발하게 되면, 사용자들에게 조금 더 안전하고 신뢰할 수 있는 서비스를 만들어 줄 수 있을 것이란 생각으로 시작
+블록체인에 대한 기본 이론을 배우고, IB... </p>
+      
+    </div>
+  </div>
+  <div>
+    <p class="continue"><a href="/home/" class="btn">Continue reading...</a></p>
+  </div>
+</div>
+
+
+          
+          
+
+        
+        
+      
+
+      </div>
+      
+
+      
+      
+
+    </div>
+  </div>
+</section>
+
+
+		
+
+
+<footer class="footer">
+  <div class="content container">
+      <!--// row -->
+      <div class="row">
+          <div class="col-xs-6">
+            
+              <img class="footer-logo" src="img/logo-dark.png" alt="Losnah&#39;s Think Story">
+            
+          </div>
+          <div class="col-xs-6 text-right sm-text-left">
+              <p class="margin-b-0">
+                <a class="fweight-700" target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a> adaptation by <a class="fweight-700" target="_blank" rel="noopener" href="https://molavec.com">Molavec</a>.
+                <br>
+                <br>
+                <a class="fweight-700" target="_blank" rel="noopener" href="https://keenthemes.com/preview/aircv/">Aircv</a>. Theme Powered by: <a class="fweight-700" target="_blank" rel="noopener" href="https://www.keenthemes.com/">KeenThemes.com</a>.
+            </p>
+          </div>
+      </div>
+      <!--// end row -->
+  </div>
+</footer>
+		<!-- Back To Top -->
+<a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+<!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- CORE PLUGINS -->
+<script src="/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- PAGE LEVEL PLUGINS -->
+<script src="/vendor/jquery.easing.js" type="text/javascript"></script>
+<script src="/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+<script src="/vendor/jquery.wow.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.parallax.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.appear.js" type="text/javascript"></script>
+<script src="/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+<!-- PAGE LEVEL SCRIPTS -->
+
+
+
+<script src="/js/layout.js"></script>
+<script src="/js/components/progress-bar.js"></script>
+<script src="/js/components/masonry.js"></script>
+<script src="/js/components/wow.js"></script>
+
+
+		
+
+  </body>
 </html>
-
-
-<script src="/js/book.js"></script>

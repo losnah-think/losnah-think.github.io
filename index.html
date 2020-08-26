@@ -1,384 +1,803 @@
 <!DOCTYPE html>
-<html lang="ko">
 
+<html lang="en" class="no-js" id="body">
+
+	<!-- BEGIN HEAD -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-    
-      <link rel="icon" href="/favicon.png" />
-    
+  
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
 
-    <title>
-        
-          Losnah&#39;s Think Story - Losnah&#39;s Think Story
-        
-    </title>
+  <title>Losnah&#39;s Think Story</title>
 
-    <!-- Spectre.css framework -->
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  
 
-    <!-- theme css & js -->
-    
-<link rel="stylesheet" href="/css/book.css">
+  <meta name="description" content="기획에 필요한 내용들을 정리하며 학습합니다.">
 
-    
-<script src="/js/book.js"></script>
+  
 
 
-    <!-- tocbot -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-    
-    <!-- katex -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/2980/5252/files/favicon_32x32.png?v=1521894486" type="image/png">
 
-    <!-- google AdSense -->
-    <script data-ad-client="ca-pub-3394401430657820" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
 
-ga('create', 'UA-176039784-1', 'auto');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const zooming = new Zooming()
-    zooming.listen('.book-content img')
-})
-</script>
-
-<meta name="generator" content="Hexo 5.0.2"></head>
-
-<body>
-
-<div class="book-container">
-  <div class="book-sidebar">
-    <div class="book-brand">
-  <a href="/">
-    <img src="/favicon.png">
-    <span>LOSNAH&#39;S THINK STORY</span>
-  </a>
-</div>
-    <div class="book-menu">
-  <ul>
-<li><a href="/">Home</a></li>
-<li><a href="/Project/Project-Story">Project</a></li>
-</ul>
-<h1>Blog</h1>
-<ul>
-<li><a href="/Think-Blog/MinimumViableProduct/">MVP(MinimumViableProduct) 개발, 서비스 기획의 대처 방안</a></li>
-</ul>
-<h1>Read Book-List</h1>
-<ul>
-<li><a href="/Book-List/%EA%B8%B0%ED%9A%8D%EC%9E%90%EC%9D%98-%EC%9D%BC">기확자의 일</a></li>
-<li><a href="/Book-List/MakingWorkVisible/">Making Work Visible</a></li>
-</ul>
-<h1>Notion</h1>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.notion.so/Thorr-Wiki-06d8bd19779d4243b0bfa2778bcb2a9d">Thorr Wiki</a></li>
-</ul>
-
-</div>
+<!-- Open Graph data-->
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Losnah&#39;s Think Story">
+<meta property="og:site_name" content="Losnah&#39;s Think Story">
+<meta property="og:url" content="http://losnah-think.github.io/index.html">
+<meta property="og:description" content="기획에 필요한 내용들을 정리하며 학습합니다.">
 
 
-<script src="/js/book-menu.js"></script>
 
-  </div>
 
-  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
-  <div class="sidebar-toggle-inner"></div>
-</div>
 
-<script>
-function add_inner() {
-  let inner = document.querySelector('.sidebar-toggle-inner')
-  inner.classList.add('show')  
-}
+<!-- end Open Graph data-->
+  
+<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+  
+<!-- GLOBAL MANDATORY STYLES -->
+<link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="/vendor/animate.css/animate.css" rel="stylesheet">
 
-function remove_inner() {
-  let inner = document.querySelector('.sidebar-toggle-inner')
-  inner.classList.remove('show')
-}
 
-function sidebar_toggle() {
-    let sidebar_toggle = document.querySelector('.sidebar-toggle')
-    let sidebar = document.querySelector('.book-sidebar')
-    let content = document.querySelector('.off-canvas-content')
-    if (sidebar_toggle.classList.contains('extend')) { // show
-        sidebar_toggle.classList.remove('extend')
-        sidebar.classList.remove('hide')
-        content.classList.remove('extend')
-    }
-    else { // hide
-        sidebar_toggle.classList.add('extend')
-        sidebar.classList.add('hide')
-        content.classList.add('extend')
-    }
-}
-</script>
 
-  <div class="off-canvas-content">
-    <div class="columns">
-      <div class="column col-10 col-lg-12">
-        <div class="book-navbar">
-          <!-- For Responsive Layout -->
+<link rel="stylesheet" href="/sass/layout.css">
 
-<header class="navbar">
-  <section class="navbar-section">
-    <a onclick="open_sidebar()">
-      <i class="icon icon-menu"></i>
-    </a>
-  </section>
+  
+
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<!-- END HEAD -->
+
+  <body>
+		
+		
+
+
+<!--========== HEADER ==========-->
+<header class="header navbar-fixed-top">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="menu-container js_nav-item">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="toggle-icon"></span>
+              </button>
+
+              <!-- Logo -->
+              <div class="logo">
+                <!-- En caso de una text -->
+                
+                    <a class="logo-wrap" href="#body" style="text-decoration: none;" >
+                        <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                        <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                    </a>
+                
+              </div>
+              <!-- End Logo -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-collapse">
+              <div class="menu-container">
+                  <ul class="nav navbar-nav navbar-nav-right">
+                      
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="#body"
+                            >
+                            Home
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="#about"
+                            >
+                            About
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="#work"
+                            >
+                            Work
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="#contact"
+                            >
+                            Contact
+                        </a>
+                        </li>
+                      
+                  </ul>
+              </div>
+          </div>
+          <!-- End Navbar Collapse -->
+      </div>
+  </nav>
+  <!-- Navbar -->
+
 </header>
+<!--========== END HEADER ==========-->
 
-        </div>
-        <div class="book-content">
-          <div class="book-post">
-  <h2 id="Losnah’s-my-Story">Losnah’s my Story</h2>
-<h3 id="보안-개발-기획">보안 -&gt; 개발 -&gt; 기획</h3>
-<p><strong>정보보호학과</strong></p>
-<ul>
-<li>컴퓨터를 사용하는 모든 사용자들이 안전하게 이용할 수 있도록 하는 것을 꿈꾸며 진학</li>
-<li>보안을 공부하며, 개발을 이해하지 못한다면 이론으로 배운 보안은 수박 겉핥기라고 생각</li>
-<li>암호학에 관심이 있던 저는 정수론을 기반으로 계산할 수 있는 프로그램을 만들며 개발 실력을 키움</li>
-</ul>
-<p><strong>잔디정원사, 오픈채팅방 (소수 정예)</strong></p>
-<ul>
-<li>개발을 공부할때 목표를 가지고 ‘1Day 1Contribution’ 을 목표로 하루에 하나씩 공부한 내용을 Github에 올리며 공부</li>
-<li>개발을 공부하며 가장 기뻤던 것 = “내가 생각한 것을 내가 만들 수 있다.”</li>
-<li>개발자들끼리 소통을 하며, 고충들을 알며 소통할 수 있는 방안들을 알게됌</li>
-<li>오픈채팅방에서 스터디를 진행하기도 하고, 정보 교류도 하며 성장할 수 있는 동력을 얻음</li>
-</ul>
-<p><strong>한국블록체인연구교육원, 교육과정 수료</strong></p>
-<ul>
-<li>블록체인 서비스를 개발하게 되면, 사용자들에게 조금 더 안전하고 신뢰할 수 있는 서비스를 만들어 줄 수 있을 것이란 생각으로 시작</li>
-<li>블록체인에 대한 기본 이론을 배우고, IBM의 '하이퍼레저 패브릭’를 공부하여 프로젝트를 진행함</li>
-<li>프로젝트를 진행하면서 문제 파악, 해결 방안 마련, 기능 설계 등의 기획 업무를 진행하며 흥미를 느낌</li>
-</ul>
-<p><strong>블록체인 SI 기업 취업, 기획 업무를 담당함</strong></p>
-<ul>
-<li>블록체인 서비스를 만들어 조금 더 신뢰있는 서비스를 만들고 싶었음.</li>
-<li>블록체인 기술에 대한 이해를 기반으로 다양한 솔루션에 대해 제안을 했음</li>
-<li>경영난으로 인한 권고사직</li>
-</ul>
-<p><strong>현재</strong></p>
-<ul>
-<li>짧은 기간 동안 다양한 제안을 써보긴 했지만, 부족함을 느낌</li>
-<li>앞으로 성장하기 위한 서비스 기획의 기본기를 다져보려고 함.</li>
-<li>성장하는 과정 중 공부한 내용을 정리하여 블로그에 올릴 예정</li>
-</ul>
-<h2 id="Losnah’s-Project-Story">Losnah’s Project Story</h2>
-<p>프로젝트 명 : 양자택일형 연예인 선호도 투표 앱 (Make for Fan)</p>
-<p>프로젝트 기간 : 2019.09 ~ 2019.11</p>
-<p>수행 내용 :</p>
-<ul>
-<li>
-<p>제품 영상 및 발표 자료</p>
-<p><a target="_blank" rel="noopener" href="https://o365tuackr-my.sharepoint.com/:p:/g/personal/hansol416_o365_tu_ac_kr/EXDIIsppb2FPr-ZQ5OgNWLQBOnNOvYrRwHHC-7gxVgeSmA?e=LmUSfE">Hyperledger Fabric 기반 연예인 투표 앱</a></p>
-</li>
-<li>
-<p>아이디어 기획 및 자료 조사</p>
-<ul>
-<li>기획 사유 : 프로듀스 101 전 시리즈 조작 사건 이후 신뢰할 수 있는 투표 시스템에 필요성을 느껴 기획</li>
-</ul>
-</li>
-<li>
-<p>각종 문서 및 발표자료 제작</p>
-</li>
-<li>
-<p>기획안 작성 내용 : <a target="_blank" rel="noopener" href="https://www.notion.so/iloveblockchain/FFF-72625d9e47174cd8b7894574a81b58a7">https://www.notion.so/iloveblockchain/FFF-72625d9e47174cd8b7894574a81b58a7</a></p>
-</li>
-</ul>
-<hr>
-<p>프로젝트 명 : 제품 키 중고 거래 및 관리 프로젝트, 품키품키</p>
-<p>프로젝트 기간 : 2019.09 ~ 2019.10</p>
-<p>수행 내용:</p>
-<ul>
-<li>
-<p>제품 구현 영상 : <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=0Abn7ioxLis">https://www.youtube.com/watch?v=0Abn7ioxLis</a></p>
-</li>
-<li>
-<p>아이디어 기획 및 각종 설계 문서 작성</p>
-<ul>
-<li>기획 사유 : 사용자의 제품키 관리 미흡, 제품키 중고 거래의 제도화 목적
-<ul>
-<li>기획 배경
-<ul>
-<li>해외에서의 제품키 중고 거래를 허용하라는 판결</li>
-<li>명품 중고거래, 당근마켓 등 중고거래가 활성화 되고 있는 현상</li>
-<li>온라인상에서 불법으로 획득한 키를 악의적으로 판매하고 있는 현상 등 소프트웨어의 가치를 떨어트리는 현상을 가지고 있음</li>
-</ul>
-</li>
-<li>기획 내용
-<ul>
-<li>블록체인에 제품키를 등록하고, 해당 제품키에 사용자 ID를 연결하여 제품키를 관리할 수 있는 솔루션 제안</li>
-<li>소유권 이전 기능을 통한 제품키 중고 거래 시장 활성화 및 효과적인 키 관리 방안 마련</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>문서 작성 내용 : <a target="_blank" rel="noopener" href="https://www.notion.so/iloveblockchain/b445eb6b55314f6a9690e96646256b09">https://www.notion.so/iloveblockchain/b445eb6b55314f6a9690e96646256b09</a></p>
-</li>
-</ul>
-<hr>
-<p>프로젝트 명 : 길거리음식 지도 어플 (개발)</p>
-<p>프로젝트 기간 : 2020.01 ~ 2020.06</p>
-<p>수행 내용 :</p>
-<ul>
-<li>링크 ( 모바일 전용 ) : <a target="_blank" rel="noopener" href="https://bit.ly/gileat">https://bit.ly/gileat</a></li>
-<li>가게 정보 등록, 수정, 삭제, 정렬 기능 구현</li>
-<li>가게 운영 시작, 종료</li>
-<li>가게 정보 검색 구현</li>
-</ul>
-<hr>
-<p>프로젝트 명 : 블록체인 기반 데이터 리워드 및 거래 서비스, 제안서 작성 보조 업무</p>
-<p>프로젝트 기간 : 2020.02 ~ 2020.06</p>
-<p>수행 내용 :</p>
-<ul>
-<li>사용 툴 : Adobe XD, Notion, Microsoft PowerPoint</li>
-<li>데이터 수집을 위한 투표 프로세스 제안</li>
-<li>설명을 위한 프로토타입 앱 화면 제작</li>
-<li>기타 자료 조사 : <a target="_blank" rel="noopener" href="https://www.notion.so/glofserteam/365925f3df92456d85e8fa63db18f87d?v=0640a6349a58420ba3ed5d114dba179e">https://www.notion.so/glofserteam/365925f3df92456d85e8fa63db18f87d?v=0640a6349a58420ba3ed5d114dba179e</a></li>
-</ul>
-<hr>
-<p>프로젝트 명 : 국토교통부, 블록체인 기반의 부동산 거래 플랫폼 구축을 위한 정보화전략계획(BPR/ISP) 사업 제안서 작성 보조</p>
-<p>프로젝트 기간 : 2020.05 ~ 2020.06</p>
-<p>수행 내용</p>
-<ul>
-<li>Microsoft PowerPoint</li>
-<li>부동산 물건 정보 검증 시 필요한 블록체인 프로세스 제안</li>
-<li>제안서 작성 시 필요한 자료 조사</li>
-<li>사용자 신원 확인을 위한 블록체인 프로세스 제안</li>
-</ul>
-<hr>
-<p>프로젝트 명 : 웰키 INC, 휴가 관리 솔루션 외주</p>
-<p>프로젝트 기간 : 2020.05 ~ 2020.08</p>
-<p>수행 내용</p>
-<ul>
-<li>사용 툴 : Github, Adobe XD, Zeplin, Notion, Slack, <a target="_blank" rel="noopener" href="http://oven.io">oven.io</a></li>
-<li>사용자 페이지 기획 및 화면 설계, 기능 설계</li>
-<li>법인 관리자 페이지 상세 기능 설계</li>
-<li>API 테스트 및 이슈 체킹</li>
-<li>Github Project, Issue 를 이용한 업무 시각화</li>
-<li>개발 현황 관련 보고</li>
-</ul>
-<h2 id="Losnah’s-Think-Blog">Losnah’s Think Blog</h2>
-<h3 id="MVP-개발-그리고-서비스-기획에-관한-글">MVP 개발 그리고 서비스 기획에 관한 글</h3>
-<ul>
-<li><a href="/Think-Blog/MinimumViableProduct/">MVP(MinimumViableProduct) 개발, 서비스 기획의 대처 방안</a></li>
-</ul>
-<h2 id="최근-읽은-서적">최근 읽은 서적</h2>
-<h3 id="기획-업무에-관한-서적-★★★★★">기획 업무에 관한 서적 ★★★★★</h3>
-<ul>
-<li><a href="/Book-List/%EA%B8%B0%ED%9A%8D%EC%9E%90%EC%9D%98-%EC%9D%BC">기확자의 일</a></li>
-</ul>
-<h3 id="업무-시각화에-관한-서적-★★★★☆">업무 시각화에 관한 서적 ★★★★☆</h3>
-<ul>
-<li><a href="/Book-List/MakingWorkVisible/">Making Work Visible</a></li>
-</ul>
-
-</div>
+		
 
 
-  <div class="book-comments">
-    
-<script src="https://utteranc.es/client.js"
-        repo="losnah-think/product-manager"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-    <div id="disqus_thread"></div>
-    <script>
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://losnah-think.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-  </div>
-
-
-
-<script src="/js/book-post.js"></script>
-
-        </div>
+<!--========== HERO ==========-->
+<div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/03.jpg" data-position="-150px center">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="promo-block-divider">
+                  <h1 class="promo-block-title">Choi<br>Han Sol</h1>
+                  <p class="promo-block-text">Product Manger &amp; Blockchain Developer</p>
+              </div>
+              <ul class="list-inline">
+                  
+                
+                  <li><a title="Linkedin" target="_blank" rel="noopener" href="https://www.linkedin.com/in/한솔-최-98a764159" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                
+              </ul>
+          </div>
       </div>
-      <div class="column col-2 hide-lg">
-        <div class="book-post-info">
-  
-    <div class="book-post-meta">
-
-  <div class="author">
-
-    <!-- Author image -->
-    <div class="author-img">
-      
-        <figure class="avatar avatar-lg">
-          <img src="/profile.png" alt="...">
-        </figure>
-      
-    </div>
-
-    <!-- Author title -->
-    <div class="author-title">
-      <div>Losnah</div>
-      <div>2020-08-22</div>
-    </div>
+      <!--// end row -->
   </div>
-
-  
-
-  <div class="divider"></div>
 </div>
-  
-
-  <div class="book-tocbot">
-</div>
-<div class="book-tocbot-menu">
-  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-  <a onclick="go_top()">Back to top</a>
-  <a onclick="go_bottom()">Go to bottom</a>
-</div>
+<!--========== HERO ==========-->
 
 
-<script src="/js/book-toc.js"></script>
 
-</div>
+<!-- About -->
+<div id="about">
+  <div class="container content-lg">
+      <div class="row">
+          <div class="col-sm-3 sm-margin-b-30">
+              <div class="text-right sm-text-left">
+                  <h2 class="margin-b-0">Losnah's My Story</h2>
+                  <p>Losnah는 hansol을 뒤집어 작성한 닉네임입니다.</p>
+              </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-1">
+              <div class="margin-b-60">
+                안녕하세요. 저는 최한솔 입니다. <br> 블록체인 SI업체에서 신규 서비스 기획 및 제안서 작업을 담당하여 사용자들에게 신뢰할 수 있는 서비스를 제공하고자 했던 기획자 겸 개발자입니다. <br>기획을 하기 위해서는 계속해서 공부를 해야하고, 스스로 발전이 있어야 한다고 생각하여 스터디, 컨퍼런스 참여, 다른 사람들과의 소통등을 통해 꾸준히 성장해 나가고 있습니다. <br>제대로된 서비스를 기획하기 위해서는 기술을 이해하고, 엔지니어들과 소통할 수 있어야 한다고 생각합니다. <br>학부 생활때부터 해온 개발 경험과 꾸준히 성장해 나가려는 노력으로 무한대로 성장해나가며, 세상에서 소통을 제일 잘하는 기획자가 되는 것이 꿈입니다.
+              </div>
+
+              <!-- Progress Box -->
+              
+                <div class="progress-box">
+                    <h5> 쉬지않는 상상력 <span class="color-heading pull-right">100%</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="100"></div>
+                    </div>
+                </div>
+              
+                <div class="progress-box">
+                    <h5> 엔지니어와의 소통 능력 <span class="color-heading pull-right">80%</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
+                    </div>
+                </div>
+              
+                <div class="progress-box">
+                    <h5> 열정 <span class="color-heading pull-right">100%</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="100"></div>
+                    </div>
+                </div>
+              
+                <div class="progress-box">
+                    <h5> 부산 사투리 <span class="color-heading pull-right">100%</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="100"></div>
+                    </div>
+                </div>
+              
+                <div class="progress-box">
+                    <h5> 기획 업무 능력 <span class="color-heading pull-right">70%</span></h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
+                    </div>
+                </div>
+              
+              <!-- End Progress Box -->
+          </div>
       </div>
-    </div>
+      <!--// end row -->
+  </div>
+</div>
+<!-- End About -->
+
+
+
+<!-- Portfolio -->
+<div id="work">
+  <div class="container content-lg">
+      <div class="row">
+          <div class="col-sm-3 sm-margin-b-30">
+              <div class="text-right sm-text-left">
+                  <h2 class="margin-b-0">Losnah&#39;s Project Story</h2>
+                  <p>짧은 기간 동안 소중한 경험들을 했습니다. 회사 업무로 진행한 부분들은 공개가 어려운점 양해 부탁드립니다.</p>
+              </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-1">
+            
+
+
+<!-- Masonry Grid -->
+<div class="masonry-grid row row-space-2">
+
+  <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+
+  
+    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> [2020.05 ~ 2020.08] 휴가 관리 솔루션 기획</p>
+              </div>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close">닫기</a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5">[2020.05 ~ 2020.08] 휴가 관리 솔루션 기획</h3>
+                      <span>외주 업무, Project Manager</span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                             <p> - 사용자 페이지 기획 및 화면 설계, 기능 설계 <br> - 사용자 기능 기획 (휴가 신청, 취소, 휴가 부여 로그 조회) <br> - 법인 관리자 페이지 상세 기능 설계 <br> - API 테스트 및 이슈 체킹 <br> - Github Project, Issue 를 이용한 업무 시각화 <br> - 개발 현황 관련 보고 <br> </p> 
+                            
+                            <ul class="list-inline work-popup-tag">
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <span class="work-popup-tag-text"> Github </span>
+                                    
+                                  </li>
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://www.notion.so/9992/DayOff-094738be75ae4ac0993b1322bb23f401">Notion</a>
+                                    
+                                  </li>
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <span class="work-popup-tag-text"> Slack </span>
+                                    
+                                  </li>
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://ovenapp.io/view/STyuOCKfakRDOXbdSWrjPKPeqN4aq41o/vI3Z5">oven.io</a>
+                                    
+                                  </li>
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <span class="work-popup-tag-text"> Adobe XD </span>
+                                    
+                                  </li>
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <span class="work-popup-tag-text"> Zeplin </span>
+                                    
+                                  </li>
+                                
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            
+                              <p class="margin-b-5"><strong>Product Manager:</strong> <br>최한솔</p>
+                            
+                              <p class="margin-b-5"><strong>Front-End:</strong> <br>염태민, 장석환</p>
+                            
+                              <p class="margin-b-5"><strong>Back-End:</strong> <br>전가빈</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
   </div>
   
-  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> [20.01 ~ 20.06] 길거리음식 지도 어플, 길잇 (개발)</p>
+              </div>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close">닫기</a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5">[20.01 ~ 20.06] 길거리음식 지도 어플, 길잇 (개발)</h3>
+                      <span>Back-End Developer</span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <p> - 가게 정보 등록, 수정, 삭제, 정렬 기능 구현<br> - 가게 운영 시작, 종료<br> - 가게 정보 검색 구현<br> </p>
+                            
+                              <p>
+                                <b><a target="_blank" rel="noopener" href="https://bit.ly/gileat"> 링크(모바일 전용) </a></b>
+                              </p>
+                            
+                            <ul class="list-inline work-popup-tag">
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://github.com/ellapresso/mad_street_shop">Github</a>
+                                    
+                                  </li>
+                                
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            
+                              <p class="margin-b-5"><strong>Design:</strong> 김혜라</p>
+                            
+                              <p class="margin-b-5"><strong>Front-End:</strong> 김혜인,유윤선</p>
+                            
+                              <p class="margin-b-5"><strong>Back-End:</strong> 황윤지,최한솔</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
+  </div>
+  
+    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="img/397x300/01.jpg" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> [20.02 ~ 20.06] 블록체인 기반 데이터 리워드 및 거래 서비스</p>
+              </div>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close">닫기</a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5">[20.02 ~ 20.06] 블록체인 기반 데이터 리워드 및 거래 서비스</h3>
+                      <span>제안서 작성 보조 업무</span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <p> - 데이터 수집을 위한 투표 프로세스 제안 <br> - 설명을 위한 프로토타입 앱 화면 제작 <br> </p>
+                            
+                            <ul class="list-inline work-popup-tag">
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://www.notion.so/glofserteam/365925f3df92456d85e8fa63db18f87d?v=0640a6349a58420ba3ed5d114dba179e">Notion(자료 조사 내용)</a>
+                                    
+                                  </li>
+                                
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            
+                              <p class="margin-b-5"><strong>제안서 자료 조사:</strong> 장윤혜, 최한솔</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
+  </div>
+  
+    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 md-margin-b-4">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="img/397x300/02.jpg" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> [20.05 ~ 20.06] 블록체인 기반의 부동산 거래 플랫폼 구축을 위한 정보화전략계획(BPR/ISP) 사업 제안</p>
+              </div>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close">닫기</a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5">[20.05 ~ 20.06] 블록체인 기반의 부동산 거래 플랫폼 구축을 위한 정보화전략계획(BPR/ISP) 사업 제안</h3>
+                      <span>제안서 작성 보조</span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <p> - Microsoft PowerPoint <br> - 부동산 물건 정보 검증 시 필요한 블록체인 프로세스 제안 <br> - 제안서 작성 시 필요한 자료 조사 <br> - 사용자 신원 확인을 위한 블록체인 프로세스 제안 <br> </p>
+                            
+                            <ul class="list-inline work-popup-tag">
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <span class="work-popup-tag-text"> Microsoft PowerPoint </span>
+                                    
+                                  </li>
+                                
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            
+                              <p class="margin-b-5"><strong>Project Leader:</strong> 류동주 박사</p>
+                            
+                              <p class="margin-b-5"><strong>Project Manager:</strong> 최한솔</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
+  </div>
+  
+    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4 margin-b-4">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="img/397x400/01.jpg" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> [19.09 ~ 19.10] 블록체인 기반 제품키 중고 거래 및 관리 프로젝트</p>
+              </div>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close">닫기</a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5">[19.09 ~ 19.10] 블록체인 기반 제품키 중고 거래 및 관리 프로젝트</h3>
+                      <span>아이디어 기획, 설계 문서 작성, 백엔드 보조</span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <p> - 기획 사유 : 사용자의 제품키 관리 미흡, 제품키 중고 거래의 제도화 목적 <br> - 기획 배경<br> - 해외에서의 제품키 중고 거래를 허용하라는 판결<br> - 명품 중고거래, 당근마켓 등 중고거래가 활성화 되고 있는 현상<br> - 온라인상에서 불법으로 획득한 키를 악의적으로 판매하고 있는 현상 등 소프트웨어의 가치를 떨어트리는 현상을 가지고 있음<br> - 기획 내용<br> - 블록체인에 제품키를 등록하고, 해당 제품키에 사용자 ID를 연결하여 제품키를 관리할 수 있는 솔루션 제안<br> - 소유권 이전 기능을 통한 제품키 중고 거래 시장 활성화 및 효과적인 키 관리 방안 마련<br> </p>
+                            
+                              <p>
+                                <b><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=0Abn7ioxLis"> 구현 제품 영상 </a></b>
+                              </p>
+                            
+                            <ul class="list-inline work-popup-tag">
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://www.notion.so/iloveblockchain/b445eb6b55314f6a9690e96646256b09">Notion</a>
+                                    
+                                  </li>
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://github.com/losnah-think/PoomKey">Github</a>
+                                    
+                                  </li>
+                                
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            
+                              <p class="margin-b-5"><strong>Product Manager:</strong> 최한솔</p>
+                            
+                              <p class="margin-b-5"><strong>Front-End:</strong> 원소희, 박찬형</p>
+                            
+                              <p class="margin-b-5"><strong>Back-End:</strong>  박찬형, 최한솔</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
+  </div>
+  
+    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+      <!-- Work -->
+      <div class="work work-popup-trigger">
+          <div class="work-overlay">
+              <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
+              <div class="work-overlay-label">
+                <p> [19.09 ~ 19.11] 양자택일형 연예인 선호도 투표 앱</p>
+              </div>
+          </div>
+          <div class="work-popup-overlay">
+              <div class="work-popup-content">
+                  <a href="javascript:void(0);" class="work-popup-close">닫기</a>
+                  <div class="margin-b-30">
+                      <h3 class="margin-b-5">[19.09 ~ 19.11] 양자택일형 연예인 선호도 투표 앱</h3>
+                      <span>아이디어 기획, 각종 문서 및 발표 자료 제작</span>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            <p> - 아이디어 기획 및 자료 조사 - 기획 사유 : 프로듀스 101 전 시리즈 조작 사건 이후 신뢰할 수 있는 투표 시스템에 필요성을 느껴 기획 - 자료 조사 및 기획안 제작 * (좌측 하단의 Notion 링크 클릭 시 자료를 볼 수 있습니다.) </p>
+                            
+                              <p>
+                                <b><a target="_blank" rel="noopener" href="https://o365tuackr-my.sharepoint.com/:p:/g/personal/hansol416_o365_tu_ac_kr/EXDIIsppb2FPr-ZQ5OgNWLQBOnNOvYrRwHHC-7gxVgeSmA?e=LmUSfE"> 발표 자료 </a></b>
+                              </p>
+                            
+                            <ul class="list-inline work-popup-tag">
+                                
+                                  <li class="work-popup-tag-item">
+                                    
+                                      <a class="work-popup-tag-link" target="_blank" rel="noopener" href="https://www.notion.so/iloveblockchain/FFF-72625d9e47174cd8b7894574a81b58a7">Notion</a>
+                                    
+                                  </li>
+                                
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="margin-t-10 sm-margin-t-0">
+                            
+                              <p class="margin-b-5"><strong>Product Manager:</strong> 최한솔</p>
+                            
+                              <p class="margin-b-5"><strong>Front-End:</strong> 원소희</p>
+                            
+                              <p class="margin-b-5"><strong>Back-End:</strong>  박찬형</p>
+                            
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Work -->
+  </div>
+  
 </div>
+<!-- End Masonry Grid -->
+          </div>
+      </div>
+      <!--// end row -->
+  </div>
+</div>
+<!-- Portfolio -->
 
-</body>
+
+
+
+<!-- experience -->
+<div id="experience">
+  <div class="bg-color-sky-light" data-auto-height="true">
+      <div class="container content-lg">
+          <div class="row">
+              <div class="col-sm-3 sm-margin-b-30">
+                  <div class="text-right sm-text-left">
+                      <h2 class="margin-b-0">Experience</h2>
+                      <p>사용자의 입장에서 항상 서비스를 기획하고, 개발자의 입장에서 이해하고 소통합니다.</p>
+                  </div>
+              </div>
+              <div class="col-sm-8 col-sm-offset-1">
+                  <div class="row row-space-2 margin-b-4">
+                    
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service " data-height="height"  >
+                                <div class="service-element">
+                                    <i class="service-icon icon-chemistry"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  > Notion</h3>
+                                    <p class=" ">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service  bg-color-base wow zoomIn " data-height="height"  data-wow-duration=".3" data-wow-delay=".1s"  >
+                                <div class="service-element">
+                                    <i class="service-icon color-white icon-screen-tablet"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  class="color-white"  > Microsoft PowerPoint</h3>
+                                    <p class="  color-white ">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service " data-height="height"  >
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  > Python3</h3>
+                                    <p class=" ">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    
+                                        <div class="service-button">
+                                            <button class="btn btn-theme btn-default-bg"> Tell me more </button>
+                                        </div>
+                                    
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service " data-height="height"  >
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  > Node.js</h3>
+                                    <p class=" ">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    
+                                        <div class="service-button">
+                                            <button class="btn btn-theme btn-default-bg"> Tell me more </button>
+                                        </div>
+                                    
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 md-margin-b-4">
+                            <div class="service " data-height="height"  >
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3  > Adobe XD</h3>
+                                    <p class=" ">Lorem ipsum dolor amet consectetur ut consequat siad esqudiat dolor</p>
+                                    
+                                        <div class="service-button">
+                                            <button class="btn btn-theme btn-default-bg"> Tell me more </button>
+                                        </div>
+                                    
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>
+                            </div>
+                        </div>
+                    
+                  </div>
+                  <!--// end row -->
+              </div>
+          </div>
+          <!--// end row -->
+      </div>
+  </div>
+</div>
+<!-- End experience -->
+
+
+
+
+<!-- Contact -->
+<div id="contact">
+  <div class="bg-color-sky-light">
+      <div class="container content-lg">
+          <div class="row">
+              <div class="col-sm-3 sm-margin-b-30">
+                  <div class="text-right sm-text-left">
+                      <h2 class="margin-b-0">Contacts</h2>
+                      <p>무엇이든 물어보세요.</p>
+                  </div>
+              </div>
+              <div class="col-sm-8 col-sm-offset-1">
+                  <div class="row">
+                    
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h5>Location</h5>
+                            <a href="#">서울, 대한민국</a>
+                        </div>
+                    
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h5>Email</h5>
+                            <a href="#">ffulk1159@gmail.com</a>
+                        </div>
+                    
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h5>KakaoTalk</h5>
+                            <a target="_blank" rel="noopener" href="https://open.kakao.com/me/Thorr">1:1 오픈채팅</a>
+                        </div>
+                    
+                  </div>
+              </div>
+          </div>
+          <!--// end row -->
+      </div>
+  </div>
+</div>
+<!-- End Contact -->
+
+
+		
+
+
+<footer class="footer">
+  <div class="content container">
+      <!--// row -->
+      <div class="row">
+          <div class="col-xs-6">
+            
+              <img class="footer-logo" src="img/logo-dark.png" alt="Losnah&#39;s Think Story">
+            
+          </div>
+          <div class="col-xs-6 text-right sm-text-left">
+              <p class="margin-b-0">
+                <a class="fweight-700" target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a> adaptation by <a class="fweight-700" target="_blank" rel="noopener" href="https://molavec.com">Molavec</a>.
+                <br>
+                <br>
+                <a class="fweight-700" target="_blank" rel="noopener" href="https://keenthemes.com/preview/aircv/">Aircv</a>. Theme Powered by: <a class="fweight-700" target="_blank" rel="noopener" href="https://www.keenthemes.com/">KeenThemes.com</a>.
+            </p>
+          </div>
+      </div>
+      <!--// end row -->
+  </div>
+</footer>
+		<!-- Back To Top -->
+<a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+<!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- CORE PLUGINS -->
+<script src="/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- PAGE LEVEL PLUGINS -->
+<script src="/vendor/jquery.easing.js" type="text/javascript"></script>
+<script src="/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+<script src="/vendor/jquery.wow.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.parallax.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.appear.js" type="text/javascript"></script>
+<script src="/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+<!-- PAGE LEVEL SCRIPTS -->
+
+
+
+<script src="/js/layout.js"></script>
+<script src="/js/components/progress-bar.js"></script>
+<script src="/js/components/masonry.js"></script>
+<script src="/js/components/wow.js"></script>
+
+
+		
+
+  </body>
 </html>
-
-
-<script src="/js/book.js"></script>

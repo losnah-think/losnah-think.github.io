@@ -1,153 +1,145 @@
 <!DOCTYPE html>
-<html lang="ko">
 
+<html lang="en" class="no-js" id="body">
+
+	<!-- BEGIN HEAD -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-    
-      <link rel="icon" href="/favicon.png" />
-    
+  
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
 
-    <title>
-        
-          Minimum Viable Product 개발에서 서비스 기획의 대처 방안 - Losnah&#39;s Think Story
-        
-    </title>
+  <title>Minimum Viable Product 개발에서 서비스 기획의 대처 방안</title>
 
-    <!-- Spectre.css framework -->
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  
 
-    <!-- theme css & js -->
-    
-<link rel="stylesheet" href="/css/book.css">
+  <meta name="description" content="기획에 필요한 내용들을 정리하며 학습합니다.">
 
-    
-<script src="/js/book.js"></script>
+  
 
 
-    <!-- tocbot -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-    
-    <!-- katex -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  <link rel="shortcut icon" href="https://cdn.shopify.com/s/files/1/2980/5252/files/favicon_32x32.png?v=1521894486" type="image/png">
 
-    <!-- google AdSense -->
-    <script data-ad-client="ca-pub-3394401430657820" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
-    
-<!-- Google Analytics -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
 
-ga('create', 'UA-176039784-1', 'auto');
-ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const zooming = new Zooming()
-    zooming.listen('.book-content img')
-})
-</script>
-
-<meta name="generator" content="Hexo 5.0.2"></head>
-
-<body>
-
-<div class="book-container">
-  <div class="book-sidebar">
-    <div class="book-brand">
-  <a href="/">
-    <img src="/favicon.png">
-    <span>LOSNAH&#39;S THINK STORY</span>
-  </a>
-</div>
-    <div class="book-menu">
-  <ul>
-<li><a href="/">Home</a></li>
-<li><a href="/Project/Project-Story">Project</a></li>
-</ul>
-<h1>Blog</h1>
-<ul>
-<li><a href="/Think-Blog/MinimumViableProduct/">MVP(MinimumViableProduct) 개발, 서비스 기획의 대처 방안</a></li>
-</ul>
-<h1>Read Book-List</h1>
-<ul>
-<li><a href="/Book-List/%EA%B8%B0%ED%9A%8D%EC%9E%90%EC%9D%98-%EC%9D%BC">기확자의 일</a></li>
-<li><a href="/Book-List/MakingWorkVisible/">Making Work Visible</a></li>
-</ul>
-<h1>Notion</h1>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://www.notion.so/Thorr-Wiki-06d8bd19779d4243b0bfa2778bcb2a9d">Thorr Wiki</a></li>
-</ul>
-
-</div>
+<!-- Open Graph data-->
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Minimum Viable Product 개발에서 서비스 기획의 대처 방안">
+<meta property="og:site_name" content="Losnah&#39;s Think Story">
+<meta property="og:url" content="http://losnah-think.github.io/Think-Blog/MinimumViableProduct/">
+<meta property="og:description" content="기획에 필요한 내용들을 정리하며 학습합니다.">
 
 
-<script src="/js/book-menu.js"></script>
 
-  </div>
 
-  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
-  <div class="sidebar-toggle-inner"></div>
-</div>
 
-<script>
-function add_inner() {
-  let inner = document.querySelector('.sidebar-toggle-inner')
-  inner.classList.add('show')  
-}
+<!-- end Open Graph data-->
+  
+<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+  
+<!-- GLOBAL MANDATORY STYLES -->
+<link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="/vendor/animate.css/animate.css" rel="stylesheet">
 
-function remove_inner() {
-  let inner = document.querySelector('.sidebar-toggle-inner')
-  inner.classList.remove('show')
-}
 
-function sidebar_toggle() {
-    let sidebar_toggle = document.querySelector('.sidebar-toggle')
-    let sidebar = document.querySelector('.book-sidebar')
-    let content = document.querySelector('.off-canvas-content')
-    if (sidebar_toggle.classList.contains('extend')) { // show
-        sidebar_toggle.classList.remove('extend')
-        sidebar.classList.remove('hide')
-        content.classList.remove('extend')
-    }
-    else { // hide
-        sidebar_toggle.classList.add('extend')
-        sidebar.classList.add('hide')
-        content.classList.add('extend')
-    }
-}
-</script>
 
-  <div class="off-canvas-content">
-    <div class="columns">
-      <div class="column col-10 col-lg-12">
-        <div class="book-navbar">
-          <!-- For Responsive Layout -->
+<link rel="stylesheet" href="/sass/layout.css">
 
-<header class="navbar">
-  <section class="navbar-section">
-    <a onclick="open_sidebar()">
-      <i class="icon icon-menu"></i>
-    </a>
-  </section>
+  
+
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+<!-- END HEAD -->
+
+  <body>
+		
+		
+
+
+<!--========== HEADER ==========-->
+<header class="header navbar-fixed-top">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="menu-container js_nav-item">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="toggle-icon"></span>
+              </button>
+
+              <!-- Logo -->
+              <div class="logo">
+                <!-- En caso de una text -->
+                
+                    <a class="logo-wrap" href="/#body" style="text-decoration: none;" >
+                        <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                        <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                    </a>
+                
+              </div>
+              <!-- End Logo -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-collapse">
+              <div class="menu-container">
+                  <ul class="nav navbar-nav navbar-nav-right">
+                      
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#body"
+                            >
+                            Home
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#about"
+                            >
+                            About
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#work"
+                            >
+                            Work
+                        </a>
+                        </li>
+                      
+                        <li class="js_nav-item nav-item">
+                            <a  class="nav-item-child nav-item-hover"
+                                href="/#contact"
+                            >
+                            Contact
+                        </a>
+                        </li>
+                      
+                  </ul>
+              </div>
+          </div>
+          <!-- End Navbar Collapse -->
+      </div>
+  </nav>
+  <!-- Navbar -->
+
 </header>
+<!--========== END HEADER ==========-->
 
-        </div>
-        <div class="book-content">
-          <div class="book-post">
-  <h2 id="MVP-개발이란-무엇일까">MVP 개발이란 무엇일까?</h2>
+		<section id="post">
+  <div class="content content-width">
+    <h1 class="post-title"> Minimum Viable Product 개발에서 서비스 기획의 대처 방안</h1>
+    <p class="date"> Sat Aug 22 2020 23:37:00 GMT+0900 </p>
+    
+    <h2 id="MVP-개발이란-무엇일까">MVP 개발이란 무엇일까?</h2>
 <p>많은 사이트에서 최소한의 기능을 담아 납품하는 것을 MVP 개발이라고 표현을 한다.</p>
 <p>하지만 MVP 개발의 궁극적인 목표는 다음과 같다.</p>
 <p><strong>고객에게 어필할 수 있는 핵심 기능을 가진 최소한의 제품을 개발하는 것</strong></p>
@@ -199,101 +191,62 @@ function sidebar_toggle() {
 <p><a target="_blank" rel="noopener" href="https://www.venturesquare.net/560001">MVP 개발에 대한 회고</a><br>
 <a target="_blank" rel="noopener" href="https://brunch.co.kr/@bellrings/4">스타트업의 서비스 기획 검증</a></p>
 
-</div>
-
-
-  <div class="book-comments">
-    
-<script src="https://utteranc.es/client.js"
-        repo="losnah-think/product-manager"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-    <div id="disqus_thread"></div>
-    <script>
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://losnah-think.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
   </div>
+</section>
+
+		
 
 
-
-<script src="/js/book-post.js"></script>
-
-        </div>
+<footer class="footer">
+  <div class="content container">
+      <!--// row -->
+      <div class="row">
+          <div class="col-xs-6">
+            
+              <img class="footer-logo" src="img/logo-dark.png" alt="Losnah&#39;s Think Story">
+            
+          </div>
+          <div class="col-xs-6 text-right sm-text-left">
+              <p class="margin-b-0">
+                <a class="fweight-700" target="_blank" rel="noopener" href="https://hexo.io/">Hexo.io</a> adaptation by <a class="fweight-700" target="_blank" rel="noopener" href="https://molavec.com">Molavec</a>.
+                <br>
+                <br>
+                <a class="fweight-700" target="_blank" rel="noopener" href="https://keenthemes.com/preview/aircv/">Aircv</a>. Theme Powered by: <a class="fweight-700" target="_blank" rel="noopener" href="https://www.keenthemes.com/">KeenThemes.com</a>.
+            </p>
+          </div>
       </div>
-      <div class="column col-2 hide-lg">
-        <div class="book-post-info">
-  
-    <div class="book-post-meta">
-
-  <div class="author">
-
-    <!-- Author image -->
-    <div class="author-img">
-      
-        <figure class="avatar avatar-lg">
-          <img src="/profile.png" alt="...">
-        </figure>
-      
-    </div>
-
-    <!-- Author title -->
-    <div class="author-title">
-      <div>Losnah</div>
-      <div>2020-08-22</div>
-    </div>
+      <!--// end row -->
   </div>
+</footer>
+		<!-- Back To Top -->
+<a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
-  
-    <div class="divider"></div>
+<!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- CORE PLUGINS -->
+<script src="/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
-    <div class="link">
-      
+<!-- PAGE LEVEL PLUGINS -->
+<script src="/vendor/jquery.easing.js" type="text/javascript"></script>
+<script src="/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+<script src="/vendor/jquery.wow.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.parallax.min.js" type="text/javascript"></script>
+<script src="/vendor/jquery.appear.js" type="text/javascript"></script>
+<script src="/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
 
-      <a class="tag-none-link" href="/tags/MVP-%EA%B0%9C%EB%B0%9C/" rel="tag">#MVP 개발</a> <a class="tag-none-link" href="/tags/MVP-%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B8%B0%ED%9A%8D/" rel="tag">#MVP 서비스 기획</a> <a class="tag-none-link" href="/tags/%EA%B0%9C%EC%9D%B8%EC%9D%98-%EC%83%9D%EA%B0%81/" rel="tag">#개인의 생각</a>
-    </div>
-    
-  
-
-  <div class="divider"></div>
-</div>
-  
-
-  <div class="book-tocbot">
-</div>
-<div class="book-tocbot-menu">
-  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-  <a onclick="go_top()">Back to top</a>
-  <a onclick="go_bottom()">Go to bottom</a>
-</div>
+<!-- PAGE LEVEL SCRIPTS -->
 
 
-<script src="/js/book-toc.js"></script>
 
-</div>
-      </div>
-    </div>
-  </div>
-  
-  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
-</div>
+<script src="/js/layout.js"></script>
+<script src="/js/components/progress-bar.js"></script>
+<script src="/js/components/masonry.js"></script>
+<script src="/js/components/wow.js"></script>
 
-</body>
+
+		
+
+  </body>
 </html>
-
-
-<script src="/js/book.js"></script>
