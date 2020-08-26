@@ -352,10 +352,10 @@ h4 {
 ------------------------------------------------------------------*/
 .progress-box .progress {
   box-shadow: none;
-  height: 3px; }
+  height: 10px; }
 
 .progress-box .progress-bar {
-  transition-duration: 2000ms;
+  transition-duration: 1000ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
@@ -602,7 +602,7 @@ h4 {
 .header .navbar {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  transition-duration: 300ms;
+  transition-duration: 100ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
@@ -619,7 +619,7 @@ h4 {
     height: 1px;
     display: inline-block;
     background: #515769;
-    transition-duration: 300ms;
+    transition-duration: 100ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .header .navbar-toggle .toggle-icon:before, .header .navbar-toggle .toggle-icon:after {
@@ -634,7 +634,7 @@ h4 {
       -webkit-transform: rotate(0);
       -moz-transform: rotate(0);
       transform: rotate(0);
-      transition-duration: 300ms;
+      transition-duration: 100ms;
       transition-property: all;
       transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .header .navbar-toggle .toggle-icon:after {
@@ -644,19 +644,19 @@ h4 {
       -webkit-transform: rotate(0);
       -moz-transform: rotate(0);
       transform: rotate(0);
-      transition-duration: 300ms;
+      transition-duration: 100ms;
       transition-property: all;
       transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .header .navbar-toggle:hover .toggle-icon {
     background: #00498c;
-    transition-duration: 300ms;
+    transition-duration: 100ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .header .navbar-toggle:hover .toggle-icon:before, .header .navbar-toggle:hover .toggle-icon:after {
       width: 21px;
       height: 1px;
       background: #00498c;
-      transition-duration: 300ms;
+      transition-duration: 100ms;
       transition-property: all;
       transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .header .navbar-toggle:hover .toggle-icon.is-clicked {
@@ -686,13 +686,13 @@ h4 {
 
 .header .logo-img-main {
   display: inline-block;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
 .header .logo-img-active {
   display: none;
-  transition-duration: 400ms;
+  transition-duration: 200ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
@@ -710,12 +710,12 @@ h4 {
     padding-right: 0; }
   .header .nav-item.active .nav-item-hover:after {
     opacity: 1;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .header .nav-item:hover .nav-item-hover:after {
     opacity: 1;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
@@ -739,10 +739,10 @@ h4 {
   position: relative; }
   .header .nav-item-hover:after {
     position: absolute;
-    top: 45px;
+    top: 42px;
     left: 0;
     width: 9px;
-    height: 2px;
+    height: 9px;
     background: #00498c;
     opacity: 0;
     content: " ";
