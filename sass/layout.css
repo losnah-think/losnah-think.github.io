@@ -97,7 +97,7 @@ a {
     right: -15px;
     width: 9px;
     height: 2px;
-    background: #FF4646;
+    background: #00498c;
     content: " "; }
 
 span {
@@ -134,17 +134,17 @@ h4 {
 
 ::selection {
   color: #fff;
-  background: #FF4646;
+  background: #00498c;
   text-shadow: none; }
 
 ::-webkit-selection {
   color: #fff;
-  background: #FF4646;
+  background: #00498c;
   text-shadow: none; }
 
 ::-moz-selection {
   color: #fff;
-  background: #FF4646;
+  background: #00498c;
   text-shadow: none; }
 
 :active,
@@ -310,7 +310,7 @@ h4 {
   border-width: 0; }
   .btn-white-bg:hover, .btn-white-bg:focus, .btn-white-bg.focus {
     color: #fff;
-    background: #FF4646;
+    background: #00498c;
     border-color: transparent; }
 
 .btn-white-brd {
@@ -330,7 +330,7 @@ h4 {
   border-width: 0; }
   .btn-default-bg:hover, .btn-default-bg:focus, .btn-default-bg.focus {
     color: #fff;
-    background: #FF4646;
+    background: #00498c;
     border-color: transparent; }
 
 .btn-theme-sm {
@@ -487,7 +487,7 @@ h4 {
   .work .work-overlay-label {
     position: absolute;
     bottom: 0px;
-    background: #FF4646;
+    background: #00498c;
     opacity: 0.8;
     text-align: right;
     width: 100%;
@@ -644,14 +644,14 @@ h4 {
       transition-property: all;
       transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .header .navbar-toggle:hover .toggle-icon {
-    background: #FF4646;
+    background: #00498c;
     transition-duration: 300ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
     .header .navbar-toggle:hover .toggle-icon:before, .header .navbar-toggle:hover .toggle-icon:after {
       width: 21px;
       height: 1px;
-      background: #FF4646;
+      background: #00498c;
       transition-duration: 300ms;
       transition-property: all;
       transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
@@ -739,7 +739,7 @@ h4 {
     left: 0;
     width: 9px;
     height: 2px;
-    background: #FF4646;
+    background: #00498c;
     opacity: 0;
     content: " ";
     transition-duration: 400ms;
@@ -755,7 +755,7 @@ h4 {
     .header .navbar-toggle {
       display: block; }
     .header .navbar-collapse {
-      background-color: #FF4646; }
+      background-color: #00498c; }
       .header .navbar-collapse.collapse {
         display: none !important; }
         .header .navbar-collapse.collapse.in {
@@ -936,7 +936,7 @@ h4 {
   	[Text Colors]
 ------------------------------------------------------------------*/
 .color-base {
-  color: #FF4646 !important; }
+  color: #00498c !important; }
 
 .color-white {
   color: #fff !important; }
@@ -960,7 +960,7 @@ h4 {
   	[Background Colors]
 ------------------------------------------------------------------*/
 .bg-color-base {
-  background: #FF4646 !important; }
+  background: #00498c !important; }
 
 .bg-color-white {
   background: #fff !important; }
