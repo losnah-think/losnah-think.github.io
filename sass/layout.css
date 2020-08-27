@@ -420,7 +420,8 @@ h4 {
 ------------------------------------------------------------------*/
 .service {
   background: #fff;
-  padding: 30px; }
+  padding: 30px;
+  overflow: hidden; }
   .service .service-element,
   .service .service-info {
     -webkit-transform: translate3d(0, 0, 0);
