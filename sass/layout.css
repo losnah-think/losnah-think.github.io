@@ -352,7 +352,7 @@ h4 {
 ------------------------------------------------------------------*/
 .progress-box .progress {
   box-shadow: none;
-  height: 10px; }
+  height: 7px; }
 
 .progress-box .progress-bar {
   transition-duration: 1000ms;
@@ -743,7 +743,7 @@ h4 {
     background: #00498c;
     opacity: 0;
     content: " ";
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
@@ -823,22 +823,22 @@ h4 {
   .page-on-scroll .header .navbar {
     background: #fff;
     border-bottom-color: #f0f0f0;
-    transition-duration: 300ms;
+    transition-duration: 150ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .page-on-scroll .header .logo-img-main {
     display: none;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .page-on-scroll .header .logo-img-active {
     display: inline-block;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
   .page-on-scroll .header .nav-item-child {
     color: #515769;
-    transition-duration: 300ms;
+    transition-duration: 150ms;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); } }
 
