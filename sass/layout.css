@@ -531,11 +531,12 @@ h4 {
   left: 0;
   right: 0;
   width: 730px;
-  height: auto;
+  height: 560px;
   display: block;
   background: #fff;
   padding: 30px;
   margin: 0 auto;
+  overflow: auto;
   -webkit-transform: translate3d(0, -50%, 0);
   -moz-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
